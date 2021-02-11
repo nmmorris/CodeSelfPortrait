@@ -1,3 +1,15 @@
+/*************************************************************************
+    Self Portrait
+          by Natalie Morris
+
+    Draws a portrait using organic p5 shapes with changing colors when the
+    mouse is pressed.
+ 
+    ---------------------------------------------------------------------
+    Notes: This portrait is intended to simulate a desktop or computer 
+    screen editing photos based on a screenshot I took of my own sketch.
+
+**************************************************************************/
  
 // Variables
 let varRed;
@@ -23,12 +35,14 @@ function draw() {
 	varBlack = color(0, 0, 0);
 	varBeige = color(219, 213, 201);
 	varPurple = color(212, 192, 245);
+
  	if (mouseIsPressed) {
  		varBlue = varRed;
  		varRed = varBlack;
  		varWhite = varGreen;
  		varBeige = varPurple;
  	}
+ 	
  	background(varBeige);
  	drawEye1();
  	drawEyeBox();
@@ -184,7 +198,8 @@ function drawHand() {
 	vertex(mouseX - 96, mouseY + 58);
 	vertex(mouseX - 97, mouseY - 19);
 	endShape();
-	bezier(mouseX - 97, mouseY - 19, mouseX - 89, mouseY - 25, mouseX - 65, mouseY - 10, mouseX - 62, mouseY + 15);
+	bezier(mouseX - 97, mouseY - 19, mouseX - 89, mouseY - 25,
+		mouseX - 65, mouseY - 10, mouseX - 62, mouseY + 15);
 	beginShape();
 	vertex(mouseX - 62, mouseY + 15);
 	vertex(mouseX - 52, mouseY + 45);
@@ -192,7 +207,8 @@ function drawHand() {
 	vertex(mouseX - 28, mouseY - 41);
 	vertex(mouseX - 44, mouseY - 90);
 	endShape();
-	bezier(mouseX - 44, mouseY - 90, mouseX - 59, mouseY - 102, mouseX - 55, mouseY - 123, mouseX - 46, mouseY - 126);
+	bezier(mouseX - 44, mouseY - 90, mouseX - 59, mouseY - 102,
+		mouseX - 55, mouseY - 123, mouseX - 46, mouseY - 126);
 	beginShape();
 	vertex(mouseX - 46, mouseY - 126);
 	vertex(mouseX - 20, mouseY - 100);
@@ -204,21 +220,24 @@ function drawHand() {
 	vertex(mouseX + 3, mouseY - 72);
 	vertex(mouseX - 12, mouseY - 121);
 	endShape();
-	bezier(mouseX - 12, mouseY - 121, mouseX - 23, mouseY - 130, mouseX - 23, mouseY - 151, mouseX - 12, mouseY - 157);
+	bezier(mouseX - 12, mouseY - 121, mouseX - 23, mouseY - 130,
+		mouseX - 23, mouseY - 151, mouseX - 12, mouseY - 157);
 	beginShape();
 	vertex(mouseX - 12, mouseY - 157);
 	vertex(mouseX + 12, mouseY - 129);
 	vertex(mouseX + 35, mouseY - 84);
 	vertex(mouseX + 44, mouseY - 1);
 	endShape();
-	bezier(mouseX + 5, mouseY - 140, mouseX + 4, mouseY - 150, mouseX + 9, mouseY - 156, mouseX + 15, mouseY - 156);
+	bezier(mouseX + 5, mouseY - 140, mouseX + 4, mouseY - 150,
+		mouseX + 9, mouseY - 156, mouseX + 15, mouseY - 156);
 	beginShape();
 	vertex(mouseX + 15, mouseY - 156);
 	vertex(mouseX + 40, mouseY - 129);
 	vertex(mouseX + 63, mouseY - 84);
 	vertex(mouseX + 71, mouseY - 4);
 	endShape();
-	bezier(mouseX + 42, mouseY - 128, mouseX + 41, mouseY - 138, mouseX + 44, mouseY - 142, mouseX + 49, mouseY - 142);
+	bezier(mouseX + 42, mouseY - 128, mouseX + 41, mouseY - 138,
+		mouseX + 44, mouseY - 142, mouseX + 49, mouseY - 142);
 	beginShape();
 	vertex(mouseX + 49, mouseY - 142);
 	vertex(mouseX + 69, mouseY - 118);
